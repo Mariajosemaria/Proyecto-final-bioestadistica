@@ -1,0 +1,38 @@
+---
+title: "Atributos de un objeto"
+author: "María"
+date: "10/11/2021"
+output: html_document
+---
+Todos los objetos tienen distintos atributos, como longitud, clase, dimensiones, inicio temporal, nombres, niveles, etc.
+```{r}
+setenta<-(1:70)
+length(setenta)
+class(setenta)
+dim(setenta)
+dim(setenta)
+ts(setenta)#aquí puedes saber qué atributos de inicio temporal tiene. #usar un archivo de serie temporal
+names(setenta)#nombres asociados al vector setenta, podemos ver que no tiene nombres asociados
+levels(setenta)
+#no tiene niveles
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+

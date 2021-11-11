@@ -1,0 +1,51 @@
+---
+title: "Matrices"
+author: "María chula"
+date: "9/11/2021"
+output: html_document
+---
+Una matriz es un arreglo rectangular de elementos del mismo tipo. Para crear una, se usa la función matrix. Es necesario un vector e indicar qué dimensiones tendrá.
+
+```{r}
+sei <- matrix(c(1,2,3,4,5,6),nrow=3,ncol=2)
+sei
+#nrow=número de filas y ncol=número de columnas
+
+```
+Para llenar una matriz a tu gusto puedes crear una a partir de un vector vacío e irla llenando después
+```{r}
+whatislove<-matrix(nrow=3, ncol=2)
+whatislove[1,1]<-"oh baby"
+whatislove[2,1]<-"don't"
+whatislove[3,1]<- "hurt me"
+whatislove[1,2]<-"don´t"
+whatislove[2,2]<-"hurt me"
+whatislove[3,2]<-"No more"
+whatislove
+```
+Se pueden seleccionar elementos de la matriz
+```{r}
+whatislove[1,] #así seleccionas los elementos del renglón 1 
+whatislove[1:2,]#elementos del primer y segundo renglón
+whatislove[6]#seleccionas el sexto elemento
+whatislove[3]
+
+```
+Puedes asignarle nombres a las columnas y a las filas
+
+```{r}
+colnames(whatislove)<-c("1°", "2°")
+whatislove
+rownames(whatislove)<-c("a","b","c")
+whatislove
+```
+
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+

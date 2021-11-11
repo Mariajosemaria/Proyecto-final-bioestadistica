@@ -1,0 +1,60 @@
+---
+title: "Listas"
+author: "María"
+date: "9/11/2021"
+output: html_document
+---
+Las listas son los objetos R que contienen elementos de diferentes tipos como: números, vectores, palabras, valores lógicos y otras listas dentro. Una lista también puede contener una matriz o una función como sus elementos. La lista se crea usando la función list ()
+```{r}
+unalista<-list("cumbia",c(1,2,4),FALSE, 34,45, matrix(c(3,9,5,1,-2,8),nrow = 2),list("jamon",12.3))
+unalista
+```
+podemos asignar nombres a los elementos de una lista a partir de la función names y un vector con los nombres 
+```{r}
+names(unalista)<-c("estilos","vector", "valor logico", "numeros","numeros", "matriz","una lista en otra lista")
+unalista
+```
+Puedes acceder a los elementos de una lista haciendo uso de [], o del nombre asociado al elemento antecediendo un $
+```{r}
+unalista[3]
+unalista$vector
+```
+Puedes agregar, eliminar y actualizar elementos de la lista. Sólo es posible agregar y eliminar elementos al final de una lista. Pero podemos actualizar cualquier elemento.
+```{r}
+#Añadir un elemento
+unalista[8] <- "Nuevecito de paquete"
+unalista[8]#imprimir elemento 8 para comprobar
+
+# Eliminar el último elemento
+unalista[8] <- 
+unalista[8]#está vacío
+
+
+# actualizar un elemento
+unalista[1] <- "actualizadop"
+unalista[1]
+```
+Puedes fusionar listas 
+```{r}
+otralista<-list(34,67,matrix(c(90,99,88,67, nrow=2)), "bartolita")
+fusionante<-list(unalista, otralista)
+fusionante
+```
+Puedes convertir listas a vector con la función unlist
+```{r}
+deslista<-unlist(otralista)
+deslista
+```
+
+
+
+
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+

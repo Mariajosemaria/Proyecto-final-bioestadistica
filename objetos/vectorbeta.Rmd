@@ -1,0 +1,70 @@
+---
+title: "Vectores"
+author: "María chula"
+date: "9/11/2021"
+output: html_document
+---
+
+Los vectores son objetos unidimensionales, pueden estar formados por datos alfanuméricos, sin embargo, sólo pueden contener un tipo de datos. Para crear un vector se utiliza la función c(), de combine
+
+```{r}
+vector<-c(1,2,3,4,6,7,85,34)
+vectorx2<-c("un vector tambien puede","contener texto")
+```
+
+También puedes usar **:** para delimitar una sucesión de números.
+
+```{r}
+numerazos<-(1:25)
+numerazos
+numerones<-seq(1:99)
+numerones
+```
+
+Para crear un vector con una secuencia específica de números, puedes establecer de qué número a qué número abarca tu secuencia, así como de cuánto en cuánto.
+
+```{r}
+numerinis<-seq(from= -.34, to=.99, by=0.02)
+numerinis
+```
+
+Para seleccionar elementos específicos de un vector, deberás indicar su posición dentro de \[\]
+
+```{r}
+numerinis[1:7]
+numerazos[c(2,3)]
+```
+
+Para excluir un elemento, basta con poner un - antes de su posición
+
+```{r}
+oye<-c("Roberto", "califícame con 10", "jaja", "es broma", "pero si quieres no es broma")
+oye[-1]
+```
+
+Para llenar un vector vacío, primero indica qué posición llenarás en \[\], y después, usando un *\<-*, indica qué agregarás
+
+```{r}
+solin<-c()
+solin[1]<-("solito")
+solin
+```
+
+puedes repetir elementos dentro de un vector
+
+```{r}
+repepepetido<-rep("pe",5)
+repepepetido
+```
+
+Puedes asociar 2 vectores
+
+```{r}
+sinko<-(1:5)
+names(oye)<-sinko
+oye
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```

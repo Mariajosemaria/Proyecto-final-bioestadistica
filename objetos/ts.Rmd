@@ -1,0 +1,78 @@
+---
+title: "Serie temporal ts"
+author: "María"
+date: "9/11/2021"
+output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+La función *ts* se utiliza para crear objetos de series de tiempo,
+requiere que los datos de partida estén distribuidos regularmente en la
+escala temporal utilizada; por ejemplo, que haya siempre un dato por
+día, o dos datos por mes o algo así.
+
+```{r}
+#ts(data = NA, start = 1, end = numeric(), frequency = 1, deltat = 1, ts.eps = getOption("ts.eps"), class = , names = )
+#as.ts(x,u)
+#is.ts(x)
+
+```
+
+**`data`**
+
+Un vector o matriz con los datos correspondientes a las series de tiempo
+. Puedes convertir un data frame a una matriz numérica con la función
+*`data.matrix`* .
+
+**`start`**
+
+El momento de la primera observación. Puede ser un sólo número o un
+vector de 2 elementos, que especifiquen una unidad de medida de tiempo y
+el número de muestras en la en la unidad de tiempo.
+
+**`end`**
+
+El momento de la última observación, se especifica igual que `start`.
+
+**`frequency`**
+
+el número de observaciones por periodo de tiempo.
+
+**`deltat`**
+
+La fracción del periodo de muestra entre observaciones sucesivas.
+
+Se usa **`frequency`** or **`deltat`** , solo una de las dos.
+
+**`ts.eps`**
+
+Tolerancia de la comparación de series de tiempo. Las frecuencias se
+consideran iguales si su diferencia es menor que el valor `ts.eps`
+
+**`class`**
+
+class to be given to the result, or none if **`NULL`** or **`"none"`**.
+The defaultis **`"ts"`** for a single series,
+**`c("mts", "ts", "matrix")`** for multiple series.
+
+**`names`**
+
+a character vector of names for the series in a multiple series:
+defaults to the colnames of **`data`**, or **`Series 1`**,
+**`Series 2`**, ....
+
+**`x`**
+
+un obejto de R
+
+```{r}
+tiempito<-ts(1:10, frequency = 4, start = c(1959, 2))
+tiempito
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
